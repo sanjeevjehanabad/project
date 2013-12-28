@@ -27,7 +27,7 @@ $apiConfig = array(
     // OAuth2 Settings, you can get these keys at https://code.google.com/apis/console
     'oauth2_client_id' => '275695418855-drddq1r5cdnf2kip2ohblp0fak1hurue.apps.googleusercontent.com',
     'oauth2_client_secret' => 'SGgnsIROdvjCD9BaXFOT5-C-',
-    'oauth2_redirect_uri' => 'http://localhost/index.php',
+    'oauth2_redirect_uri' => 'http://sanjeevjehanabad-project042.rhcloud.com/',
 
     // The developer key, you get this at https://code.google.com/apis/console
     'developer_key' => '',

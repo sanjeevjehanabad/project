@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION['gplusdata']))
 {
 // Redirection to home page
-header("location: gplus_login.php");
+header("location: index.php");
 }
 else
 {
