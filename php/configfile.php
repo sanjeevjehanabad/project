@@ -1,6 +1,6 @@
 <?php
-$consumer_key='275695418855-ms7conjjajgfhs2fq2u7h02nr8s98qto.apps.googleusercontent.com';
-$consumer_secret='lpYwHYGmz8_Pw3erVQslGd_n';
-$callback='http://localhost/contact.php';
+$consumer_key='275695418855-lqu796cglu224mb2pk8mjgt8dfu7tfe4.apps.googleusercontent.com';
+$consumer_secret='tw7YXRBrJKxgUTsfniioUPOz';
+$callback='http://sanjeevjehanabad-project042.rhcloud.com/contact.php';
 $emails_count='500'; // max-results
 ?>
