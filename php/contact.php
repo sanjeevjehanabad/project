@@ -23,3 +23,7 @@ echo $email["address"] ."<br />";
 echo "</div>";
 }
 }?>
+
+<?php
+print "<a class='home' href='home.php'>Home</a>";
+?>
