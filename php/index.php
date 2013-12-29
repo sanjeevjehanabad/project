@@ -1,44 +1,19 @@
-<?php
-require_once 'src/Google_Client.php';
-require_once 'src/contrib/Google_PlusService.php';
-session_start();
-$client = new Google_Client();
-$client->setApplicationName("9lessons Google+ Login Application");
-$client->setScopes(array('https://www.googleapis.com/auth/plus.me'));
-$plus = new Google_PlusService($client);
-if (isset($_REQUEST['logout']))
-{
-unset($_SESSION['access_token']);
-}
+<?php session_start();?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Goole OAuth Gmail contacts import</title>
+<meta content=' Goole OAuth Gmail contacts import.' name='description'/> 
+<meta content='Google, Oauth, php, Gmail, Contacts,import' name='keywords'/> 
 
-if (isset($_GET['code']))
-{
-$client->authenticate();
-$_SESSION['access_token'] = $client->getAccessToken();
-header('Location: http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']);
-}
+</head>
 
-if (isset($_SESSION['access_token']))
-{
-$client->setAccessToken($_SESSION['access_token']);
-}
-
-if ($client->getAccessToken())
-{
-$me = $plus->people->get('me');
-$_SESSION['access_token'] = $client->getAccessToken();
-}
-else
-$authUrl = $client->createAuthUrl();
-
-if(isset($me))
-{
-$_SESSION['gplusdata']=$me;
-header("location: home.php");
-}
-
-if(isset($authUrl))
-print "<a class='login' href='$authUrl'>Google Plus Login </a>";
-else
-print "<a class='logout' href='index.php?logout'>Logout</a>";
-?>
+<body>
+<div align="center">
+<h3><a style="text-decoration:none; color:#993366" href='http://thecodedeveloper.com'>THECODEDEVELOPER DEMO CODE</a></h3><br/>
+<h3>IMPORT YOUR GMAIL CONTACT CLICK THE IMAGE BELOW</h3>
+<?php include('GmailConnect.php'); ?>
+</div>
+</body>
+</html>
