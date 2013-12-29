@@ -9,5 +9,5 @@ $_SESSION['oauth_token_secret']=$access_token['oauth_token_secret'];
 ?>
 
 <a href="https://www.google.com/accounts/OAuthAuthorizeToken?oauth_token=<?php echo $oauth->rfc3986_decode($access_token['oauth_token']) ?>">
-<img src='Icon-Gmail.png'/>
+click here
 </a>

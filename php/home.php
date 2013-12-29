@@ -37,6 +37,6 @@ print "<a class='logout' href='index.php?logout'>Logout</a> ";
 
 
 ?>
-<h3>IMPORT YOUR GMAIL CONTACT CLICK THE IMAGE BELOW</h3>
 
+<h3>IMPORT YOUR GMAIL CONTACT CLICK THE IMAGE BELOW</h3>
 <?php include('GmailConnect.php'); ?>
