@@ -10,16 +10,17 @@ $oauth_verifier= $oauth->rfc3986_decode($_GET['oauth_verifier']);
 $contact_access = $getcontact_access->get_access_token($oauth,$request_token, $request_token_secret,$oauth_verifier, false, true, true);
 $access_token=$oauth->rfc3986_decode($contact_access['oauth_token']);
 $access_token_secret=$oauth->rfc3986_decode($contact_access['oauth_token_secret']);
-echo $contacts= $getcontact_access->GetContacts($oauth, $access_token, $access_token_secret, false, true,$emails_count);
+$contacts= $getcontact_access->GetContacts($oauth, $access_token, $access_token_secret, false, true,$emails_count);
 
 //Email Contacts
 foreach($contacts as $k => $a)
 {
 $final = end($contacts[$k]);
+$phone1 = end($a['gd$phoneNumber'][0]);
 foreach($final as $email)
 {
-echo "<div style='background-color:#CCCCCC; text-align:center'>";
-echo $email["address"] ."<br />";
+echo "<div style='background-color:#CCCCCC'>";
+echo $email['address'] .$phone1."<br />";
 echo "</div>";
 }
 }?>
